@@ -7,7 +7,7 @@ import magicMissionRoutes from './routes/magicMissionRoutes';
 import dotenv from 'dotenv'
 
 dotenv.config() 
-  
+
 export const app = express();
 const PORT = 3000;
 const mongoDBUserName = process.env.mongoDBUserName
@@ -21,9 +21,6 @@ const mongoDBPassword = process.env.mongoDBPassword
  */
 
 // Connect to MongoDB
-// mongoose.connect('mongodb://localhost:27017/MagicTransporters')
-//   .then(() => console.log('Connected to MongoDB'))
-//   .catch(err => console.error('Failed to connect to MongoDB:', err));
 mongoose.connect(`mongodb+srv://${mongoDBUserName}:${mongoDBPassword}@magictransporters.mitvx.mongodb.net/?retryWrites=true&w=majority&appName=MagicTransporters`)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Failed to connect to MongoDB:', err));

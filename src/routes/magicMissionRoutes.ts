@@ -53,17 +53,3 @@ router
 
   
   export default router;
-
-
-
-
-
-
-
-
-
-  // router.post('/load', loadMagicMover);
-  // router.post('/start', startMission);
-  // router.post('/end', endMission);
-  // router.get('/mostActive', getMostActiveMover);
-  // router.get('/log', getlogs);

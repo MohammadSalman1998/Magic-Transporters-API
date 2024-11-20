@@ -8,7 +8,7 @@ import { MagicItem } from "../models/magicItem";
 /**
  * @desc    Load items onto a Magic Mover.
  * @route   POST /api/movers/load
- * @access  Private (only authorized users can access)
+ * @access  public
  * @param   {Request} req - Express request object containing `moverId` and `itemIds` in the body.
  * @param   {Response} res - Express response object for sending status and data back to the client.
  * @returns {Promise<void>} - Sends a JSON response with the updated mover or an error message.
@@ -61,7 +61,7 @@ export const loadMagicMover = async (
 /**
  * @desc    Start a mission for a Magic Mover.
  * @route   POST /api/movers/start-mission
- * @access  Private (only authorized users can access)
+ * @access  public
  * @param   {Request} req - Express request object containing `moverId` in the body.
  * @param   {Response} res - Express response object for sending status and data back to the client.
  * @returns {Promise<void>} - Sends a JSON response with the updated mover or an error message.
@@ -103,7 +103,7 @@ export const startMission = async (
 /**
  * @desc    End a mission for a Magic Mover.
  * @route   POST /api/movers/end-mission
- * @access  Private (only authorized users can access)
+ * @access  public
  * @param   {Request} req - Express request object containing `moverId` in the body.
  * @param   {Response} res - Express response object for sending status and data back to the client.
  * @returns {Promise<void>} - Sends a JSON response with the updated mover or an error message.
@@ -146,7 +146,7 @@ export const endMission = async (
 /**
  * @desc    Get the most active Magic Mover(s) based on completed missions.
  * @route   GET /api/movers/most-active
- * @access  Public
+ * @access  public
  * @param   {Request} req - Express request object (no specific parameters required).
  * @param   {Response} res - Express response object for sending status and data back to the client.
  * @returns {Promise<void>} - Sends a JSON response with the most active mover(s) or an error message.
@@ -159,14 +159,7 @@ export const getMostActiveMover = async (req: Request, res: Response) => {
     const maxCompletedMissions = await MagicMover.find()
       .sort({ completedMissions: -1 })
       .select("-__v")
-    //   .select("completedMissions") 
-    //   .lean(); 
-    // if (maxCompletedMissions) {
-    //   const mostActiveMovers = await MagicMover.find({
-    //     completedMissions: maxCompletedMissions.completedMissions,
-    //   });
       res.status(200).json(maxCompletedMissions);
-    // }
   } catch (error) {
     res.status(400).json({ message: "field " });
   }
@@ -175,7 +168,7 @@ export const getMostActiveMover = async (req: Request, res: Response) => {
 /**
  * @desc    Retrieve all mission logs in descending order of timestamps.
  * @route   GET /api/logs
- * @access  Private (only authorized users can access)
+ * @access  public
  * @param   {Request} req - Express request object (no specific parameters required).
  * @param   {Response} res - Express response object for sending status and data back to the client.
  * @returns {Promise<void>} - Sends a JSON response with all mission logs or an error message.

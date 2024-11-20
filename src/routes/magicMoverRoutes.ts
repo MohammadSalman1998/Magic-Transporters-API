@@ -50,13 +50,4 @@ router
    */
   .delete("/:id", deleteMagicMoverByID);
 
-
-// router.route("/").post(addMagicMover).get(allMagicMover);
-
-// router
-//   .route("/:id")
-//   .get(getMagicMoverByID)
-//   .put(editMagicMover)
-//   .delete(deleteMagicMoverByID);
-
 export default router;

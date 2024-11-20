@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "8521a9b7-6f66-48d7-ab76-16f0745accb7",
+		"name": "Magic Transporters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37897699"
+	},
+	"item": [
+		{
+			"name": "magic movers",
+			"item": [
+				{
+					"name": "add-mover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mover 3\",\r\n    \"weightLimit\":210\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/movers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"movers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-moverByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/movers/6735dc70efcd04aafcf190eb",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"movers",
+								"6735dc70efcd04aafcf190eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a mover",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/movers/6735c741c6113ba1ad2d6806",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"movers",
+								"6735c741c6113ba1ad2d6806"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all movers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/movers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"movers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-mover",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"container 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/movers/6735d19a7cdb489dcc440dc9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"movers",
+								"6735d19a7cdb489dcc440dc9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "magic items",
+			"item": [
+				{
+					"name": "add item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"item 3\",\r\n    \"weight\": 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/items",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"item 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/items/6735e992053c6a156c27a27c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"6735e992053c6a156c27a27c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get item by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items/6735ea5f5ecd028ed8869847",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"6735ea5f5ecd028ed8869847"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/items/6735e992053c6a156c27a27c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"items",
+								"6735e992053c6a156c27a27c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "magic mission",
+			"item": [
+				{
+					"name": "load-mover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moverId\": \"673d791b52de543cb6f15c2a\",\r\n    \"itemIds\": \"673d794d52de543cb6f15c32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mission/load",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mission",
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "start-mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moverId\": \"673d791b52de543cb6f15c2a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mission/start",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mission",
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end-mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moverId\": \"673d791b52de543cb6f15c2a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mission/end",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mission",
+								"end"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "most-active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/mission/mostActive",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mission",
+								"mostActive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mission-logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/mission/log",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mission",
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

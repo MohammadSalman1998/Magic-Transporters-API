@@ -71,7 +71,7 @@ GET	              /api/missions/log	            Get all mission logs.
 ============================ Documentation ============================
 The project uses postman for API documentation. Once the application is running, you can access the live documentation at:
 
-
+https://raw.githubusercontent.com/MohammadSalman1998/Magic-Transporters-API/refs/heads/main/docs/Magic%20Transporters.postman_collection.json
 
 ============================ Project Structure ============================
 
@@ -80,3 +80,5 @@ The project uses postman for API documentation. Once the application is running,
   /models       # MongoDB schemas
   /routes       # Route definitions
   /index.ts        # server page
+/docs
+  /Magic Transporters.postman_collection.json

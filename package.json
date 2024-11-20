@@ -1,0 +1,25 @@
+{
+  "name": "magic-transporters",
+  "version": "1.0.0",
+  "description": "solution the task of back-end position",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc"
+  },
+  "author": "mohammad salman",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "magic-transporters": "file:",
+    "mongoose": "^8.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3"
+  }
+}

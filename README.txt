@@ -32,8 +32,8 @@ TypeScript: Type-safe codebase for reliability and maintainability.
     - npm install
 
 3. Set Up Environment Variables
-    - mongoDBUserName = Magic_Transporters_Task
-    - mongoDBPassword = VaGsMKaHSBK9Gskt
+    - mongoDBUserName = 
+    - mongoDBPassword = 
 
 4. Start the Application
     - Development Mode: npm run dev
